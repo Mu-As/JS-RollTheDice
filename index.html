@@ -1,12 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zar Tahmin Oyunu</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="app.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Roll The Dice</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Zar At</h1>
+      <p style="text-align: center">
+        *Sayıyı (1-6) ve o sayının kaç atışta geleceğine dair tahminini gir, zarı at. Bakalım, ne kadar şanslısın?
+      </p>
+      <div class="control">
+        <div class="targetNumber m4">
+          <label for="targetNumber">Sayı</label>
+          <input type="number" min="1" max="6" id="targetNumber" />
+        </div>
+        <div class="guessNumber m4">
+          <label for="guessNumber">Tahmin</label>
+          <input type="number" min="1" id="guessNumber" />
+        </div>
+      </div>
+      <div class="rollBtn"><button>Zarı at</button></div>
+      <div class="dice-rolls">
+        <ul id="dice-rolls"></ul>
+      </div>
+
+      <div class="endGame">
+        <p class="win">Kazandın!</p>
+        <p class="draw">Berabere!</p>
+        <p class="lose">Kaybettin!</p>
+        <p class="info">
+          <span id="output-target-number" class="output">Y</span> sayısının
+          gelmesi için zar
+          <span id="output-total-rolls" class="output">X</span> kere atıldı.
+        </p>
+      </div>
+    </div>
+  </body>
 </html>
